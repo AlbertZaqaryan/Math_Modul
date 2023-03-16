@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math_Modul</title>
+</head>
+<header>
+    <h1>Math Modul</h1>
+    <hr>
+</header>
+<body style="background-color: azure; width:max-content; height: max-content;">
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            <p>
+                Eric
+                <input type="text" name="mylist" id="" placeholder="enter numbers">
+            </p>
+            <p>
+                Artur
+                <input type="text" name="n" id="" placeholder="enter number">
+            </p>
+            <p>
+                Gagik
+                <input type="text" name="number1" id="" placeholder="enter number1">
+                <input type="text" name="number2" id="" placeholder="enter number2">
+            </p>
+            <p>
+                Arsen
+                <input type="text" name="list1" id="" placeholder="list1">
+                <input type="text" name="list2" id="" placeholder="list2">
+            </p>
+            <p>
+                Gevorg
+                <input type="text" name="fib" id="" placeholder="enter number">
+            </p>
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+
+    <div>
+        <h5>Even numbers = {{ newlist }}</h5>
+        {% for i in newlist %}
+            <p>{{ i }}</p>
+        {% endfor %}
+        <hr>
+        <h5>Factorial = {{ fact }}</h5>
+        <hr>
+        <h5>Result = {{ result }}</h5>
+        <h5>Res = {{ list_ }}</h5>
+        <h5>Fibonacci = {{ res }}</h5>
+    </div>
+</body>
+</html>
